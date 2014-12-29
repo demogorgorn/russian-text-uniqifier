@@ -248,8 +248,8 @@ class Uniqifier {
 
     public function uniqify() {
         $symbols = $this->mb_str_split($this->text);
-        var_dump($this->_resultMap);
         foreach ($symbols as $key => $symbol) {
+            var_dump(array_key_exists($symbol, $this->_resultMap));
             if (array_key_exists($symbol, $this->_resultMap) && $this->fireEvent()) {
                 $symbols[$key] = $this->pickRandom($this->_resultMap[$key]);
             }
