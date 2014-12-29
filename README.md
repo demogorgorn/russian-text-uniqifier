@@ -62,6 +62,9 @@ $text = "Что случилось с этим миром,
 Я иду домой,
 Я иду домой,
 Я иду домой";
-$u = new tugmaks\RTU\Uniqifier($text);
+$u = new tugmaks\RTU\Uniqifier($text,['encodings'=>[
+    tugmaks\RTU\Uniqifier::MAP_LATIN,
+    tugmaks\RTU\Uniqifier::MAP_GREEK,
+    ]]);
 echo $u->uniqify();
 ```
