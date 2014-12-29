@@ -205,7 +205,7 @@ class Uniqifier {
      * @param text $text
      * @param array $params configurations to be applied
      */
-    public function __construct($text, $params=[]) {
+    public function __construct($text, $params = []) {
         $this->text = $text;
         $this->encodings = isset($params['encodings']) ? $params['encodings'] : [self::MAP_LATIN];
         $this->probablity = isset($params['probablity']) ? $params['probablity'] : 50;
@@ -218,7 +218,8 @@ class Uniqifier {
     private function prepareResultMap() {
         $resultMap = [];
         foreach ($this->encodings as $encoding) {
-            foreach ($encoding as $ru => $fo) {
+            $map = "_" . $encoding . "Map";
+            foreach ($this->$map as $ru => $fo) {
                 $resultMap[$ru][] = $fo;
             }
         }

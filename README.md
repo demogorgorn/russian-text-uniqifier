@@ -62,5 +62,6 @@ $text = "Что случилось с этим миром,
 Я иду домой,
 Я иду домой,
 Я иду домой";
-echo \tugmaks\RTU\Uniqifier($text);
+$u = new tugmaks\RTU\Uniqifier($text);
+echo $u->uniqify();
 ```
