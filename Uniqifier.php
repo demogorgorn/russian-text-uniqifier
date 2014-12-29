@@ -247,7 +247,7 @@ class Uniqifier {
     }
 
     public function uniqify() {
-        $symbols = str_split($this->text);
+        $symbols = mb_str_split($this->text);
         var_dump($symbols);
         foreach ($symbols as $key => $symbol) {
             if (array_key_exists($symbol, $this->_resultMap) && $this->fireEvent()) {
