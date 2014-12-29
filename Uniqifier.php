@@ -132,7 +132,7 @@ class Uniqifier {
         'б' => 'ϭ', //Coptic Small Letter Shima
         'к' => 'κ',
         'о' => 'ο',
-        'р' => 'ρ',
+        //'р' => 'ρ',
         'с' => 'ϲ', //Greek Lunate Sigma Symbol
         'ф' => 'ϕ',
         'э' => '϶', //Greek Reversed Lunate Epsilon Symbol
@@ -249,9 +249,8 @@ class Uniqifier {
     public function uniqify() {
         $symbols = $this->mb_str_split($this->text);
         foreach ($symbols as $key => $symbol) {
-            var_dump(array_key_exists($symbol, $this->_resultMap));
             if (array_key_exists($symbol, $this->_resultMap) && $this->fireEvent()) {
-                $symbols[$key] = $this->pickRandom($this->_resultMap[$key]);
+                $symbols[$key] = $this->pickRandom($this->_resultMap[$symbol]);
             }
         }
         return implode('', $symbols);
