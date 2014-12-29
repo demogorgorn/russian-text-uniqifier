@@ -205,7 +205,7 @@ class Uniqifier {
      * @param text $text
      * @param array $params configurations to be applied
      */
-    public function __construct($text, array $params) {
+    public function __construct($text, $params=[]) {
         $this->text = $text;
         $this->encodings = isset($params['encodings']) ? $params['encodings'] : [self::MAP_LATIN];
         $this->probablity = isset($params['probablity']) ? $params['probablity'] : 50;
