@@ -253,8 +253,8 @@ class Uniqifier {
             if (array_key_exists($symbol, $this->_resultMap) && $this->fireEvent()) {
                 $symbols[$key] = $this->pickRandom($this->_resultMap[$key]);
             }
-            return implode('', $symbols);
         }
+        return implode('', $symbols);
     }
 
     /**
