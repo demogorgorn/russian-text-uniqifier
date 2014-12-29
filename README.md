@@ -28,7 +28,6 @@ Usage
 Once this class is installed, simply use it in your code by  :
 
 ```php
-<?php
 $text = "Что случилось с этим миром,
 Или сдулся шар земной?
 Все переменилось мигом -
@@ -63,4 +62,5 @@ $text = "Что случилось с этим миром,
 Я иду домой,
 Я иду домой,
 Я иду домой!";
- echo \tugmaks\RTU\Uniqifier($text); ?>```
+echo \tugmaks\RTU\Uniqifier($text);
+```
