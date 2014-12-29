@@ -1,0 +1,21 @@
+{
+    "name": "tugmaks/russian-text-uniqifier",
+    "description": "Class to uniqify russian text.",
+    "type": "library",
+    "keywords": ["uniqifier"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Maxim Tugaev",
+            "email": "tugmaks@yandex.ru"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "tugmaks\\RTU\\": ""
+        }
+    }
+}
